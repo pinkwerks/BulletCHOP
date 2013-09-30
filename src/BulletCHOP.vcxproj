@@ -28,19 +28,23 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -84,7 +88,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>D:\Documents\Dev\bullet-2.81-rev2613\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\pinkb\src\bullet-2.81-rev2613\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -96,20 +100,15 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CPLUSPLUSCHOPEXAMPLE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>D:\Documents\Dev\bullet-2.81-rev2613\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\pinkb\src\bullet-2.81-rev2613\src;C:\Program Files\Derivative\TouchDesigner088\Samples\CPlusPlus\CHOP</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>D:\Documents\Dev\bullet-2.81-rev2613\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\pinkb\src\bullet-2.81-rev2613\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>BulletCollision_vs2010_x64_debug.lib;BulletDynamics_vs2010_x64_debug.lib;LinearMath_vs2010_x64_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -135,13 +134,10 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CPLUSPLUSCHOPEXAMPLE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>D:\Documents\Dev\bullet-2.81-rev2613\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\pinkb\src\bullet-2.81-rev2613\src;C:\Program Files\Derivative\TouchDesigner088\Samples\CPlusPlus\CHOP</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -149,14 +145,13 @@
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <AdditionalDependencies>BulletCollision_vs2010_x64_release.lib;BulletDynamics_vs2010_x64_release.lib;LinearMath_vs2010_x64_release.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\Documents\Dev\bullet-2.81-rev2613\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\pinkb\src\bullet-2.81-rev2613\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BulletCHOP.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CHOP_CPlusPlusBase.h" />
     <ClInclude Include="BulletCHOP.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
